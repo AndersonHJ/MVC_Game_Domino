@@ -6,10 +6,18 @@ import graphicInterface.GGame;
 
 public class Table {
 
+	/**
+	 * The static instance of Table 
+	 */
 	private static Table table = null;
+	
 	int[] values;
 	ArrayList<Domino> dominoList;
 	
+	/**
+	 * To initialize the instance of Table
+	 * @return table the static instance which is initialized 
+	 */
 	public static synchronized Table instance(){
 		if(table == null) table = new Table();
 		return table;

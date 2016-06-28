@@ -14,12 +14,18 @@ import graphicInterface.InterfaceGame;
 */
 public class Game implements InterfaceGame {
 	/**
-	 * The graphical interface.
+	 * The static instance of graphic game
 	 */
 	private static GGame gGame = null;
+	
+	/**
+	 * The static instance of game 
+	 */
 	private static Game game = null;
 	
-	
+	/**
+	 * The instance of domino factory.
+	 */
 	private DominoFactory factory = null;
 	
 	/**
@@ -65,6 +71,11 @@ public class Game implements InterfaceGame {
 	 
 	 boolean playerIsBlocked = false; // to check whether player is blocked
 	 
+	 
+	 /**
+	  * To initialize the game instance.
+	  * @return Game the static instance of game 
+	  */
 	 public synchronized static Game instance(){
 		 if(game==null) game = new Game();
 		 return game;

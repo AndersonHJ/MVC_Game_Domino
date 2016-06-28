@@ -6,6 +6,10 @@ public class Stock {
 	
 	ArrayList<Domino> list;
 	
+	/**
+	 * The constructor of Stock
+	 * @param factory the factory to generate domino
+	 */
 	Stock(DominoFactory factory){  // create 28 dominos
 		if(factory == null) throw new NullPointerException();
 		
